@@ -26,11 +26,26 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("헬로 월드"),
-        ),
-        body: Text("헬로 월드", style: TextStyle(fontSize: 40),)),
+      home: HelloPage("안녕")
     );
   }
 }
+
+class HelloPage extends StatefulWidget {
+  final String title;
+
+  HelloPage(this.title);
+
+  @override
+  _HelloPageState createState() => _HelloPageState();
+}
+
+class _HelloPageState extends State<HelloPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar( title: Text(widget.title),),
+      body: Text(widget.title, style: TextStyle(fontSize: 40)));
+  }
+}
+
