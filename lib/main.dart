@@ -42,6 +42,7 @@ class HelloPage extends StatefulWidget {
 
 class _HelloPageState extends State<HelloPage> {
   String _message = "hello world";
+  int _counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -50,12 +51,22 @@ class _HelloPageState extends State<HelloPage> {
         child: Icon(Icons.add),
         onPressed: _changeMessage,),
       appBar: AppBar( title: Text(widget.title),),
-      body: Text(_message, style: TextStyle(fontSize: 40)));
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+              Text(_message, style: TextStyle(fontSize: 40)),
+              Text(_counter.toString(), style: TextStyle(fontSize: 40))
+            ]
+        )
+      )
+    );
   }
 
   void _changeMessage(){
     setState(() {  // 상태를 바꾼다.
       _message = _message == "안녕" ? "hello" : "안녕";
+      _counter ++;
     });
   }
 }
