@@ -1,6 +1,6 @@
 # hello_world
 
-A new Flutter project.
+플루터 연습해보기 (간단하게)
 
 ## Getting Started
 
