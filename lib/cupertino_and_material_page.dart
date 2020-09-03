@@ -19,6 +19,7 @@ class _CupertinoPageState extends State<CupertinoPage> {
         children: [
           Text("쿠퍼티노"),
           CupertinoButton(
+            onPressed: () {},
             child: Text("쿠퍼티노 버튼"),
           ),
           CupertinoSwitch(
@@ -31,6 +32,7 @@ class _CupertinoPageState extends State<CupertinoPage> {
           ),
           Text("머티리얼"),
           RaisedButton(
+            onPressed: () {},
             child: Text("머티리얼 버튼"),
           ),
           Switch(
