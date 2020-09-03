@@ -58,7 +58,13 @@ class _HelloPageState extends State<HelloPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
               Text(_message, style: TextStyle(fontSize: 40)),
-              Text(_counter.toString(), style: TextStyle(fontSize: 40))
+              Text(_counter.toString(), style: TextStyle(fontSize: 40)),
+            RaisedButton(
+              child: Text("화면이동"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CupertinoPage()));
+              },
+            )
             ]
         )
       )
