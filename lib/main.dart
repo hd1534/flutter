@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'cupertino_page.dart';
+import 'cupertino_and_material_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-//      home: HelloPage("안녕")
-    home: CupertinoPage()
+      home: HelloPage("안녕")
+//    home: CupertinoPage()
     );
   }
 }
